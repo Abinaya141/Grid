@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layouts - Flexbox & Grid</title>
+    <!--Grid-template-column or Grid-template-row adjust the row or column in fraction as fr as 1 ,2 etc
+       # eg : grid-template-column:2fr 2fr ; 
+      (header,main in first row and sidebar,footer in second row of the grid box  ) -->
+    <!--Gap : 10px ; it gives space between every grid boxes evenly -->
+    <!--grid-column and grid-row are takes the fraction spaces as 1/2,1/3,1/4 etc according to the boxes
+       # in header eg : grid:column : 1/3; 
+      (Header takes the 2 boxes space of the first col and main,sidebar in 2nd col and footer in 3rd col
+      automatically footer were goes next to the 2nd col )-->
+    <style>
+      .container-grid {
+        text-align: center;
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        gap: 10px;
+      }
+      .header {
+        background-color: rgb(94, 129, 48);
+        padding: 20px;
+        grid-column: 1/4;
+      }
+      .main {
+        background-color: rgb(199, 201, 108);
+        padding: 20px;
+        grid-column: 1/2;
+      }
+      .sidebar {
+        background-color: rgba(47, 222, 235, 0.705);
+        padding: 20px;
+      }
+      .footer {
+        background-color: rgb(219, 96, 96);
+        padding: 20px;
+        grid-column: 1/4;
+        grid-template-rows: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Grid Layout</h1>
+    <div class="container-grid">
+      <div class="header">Header</div>
+      <div class="main">Main</div>
+      <div class="sidebar">Sidebar</div>
+      <div class="footer">Footer</div>
+    </div>
+  </body>
+</html>
